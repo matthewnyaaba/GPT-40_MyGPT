@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GenAI-ERA Assistant</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+  <h1>🌍 GenAI-ERA Multimodal Assistant</h1>
+  <label for="languageSelect">Select Language:</label>
+  <select id="languageSelect">
+    <option value="English">English</option>
+    <option value="Swahili">Swahili</option>
+    <option value="Yoruba">Yoruba</option>
+    <option value="French">French</option>
+    <option value="Amharic">Amharic</option>
+  </select>
+
+  <textarea id="promptInput" placeholder="Type or record your message..."></textarea>
+  <button onclick="sendPrompt()">Send</button>
+  <button onclick="startRecording()">🎤 Start Recording</button>
+  <button onclick="stopRecording()">⏹ Stop</button>
+  <div id="responseBox">🧠 AI response will appear here...</div>
+</body>
+</html>
